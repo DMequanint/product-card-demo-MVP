@@ -1,0 +1,164 @@
+/* 
+  Mobile-first base styles for the product card component.
+  These styles define the default appearance optimized for small screens.
+*/
+.product-card {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 2rem auto; /* centers horizontally inside parent */
+  padding: 14px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 
+  Styles for the main product image within the card.
+  The image adapts to container width and maintains aspect ratio.
+*/
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+/* 
+  Container for product details: name, price, variant selector, button.
+  Uses flex column layout and centers content by default.
+*/
+.product-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+/* 
+  Product name heading styling for readability and emphasis.
+*/
+.product-name {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 
+  Styling for product price text – slightly smaller and muted color.
+*/
+.product-price {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* 
+  Shared styles for variant selector dropdown and static variant label,
+  providing consistent sizing, padding, and alignment.
+*/
+.variant-select,
+.variant-label {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 
+  Styling disabled options in variant dropdown, dimming text color.
+*/
+.variant-select option:disabled {
+  color: #999;
+}
+
+/* 
+  Styles for the Add to Cart button:
+  - Shrinks to fit content with min and max widths for usability.
+  - Visual styling includes background color, text, and rounded corners.
+  - Includes transition for hover effect and appropriate cursor styles.
+*/
+.add-to-cart-btn {
+  display: inline-block;        /* shrink to fit content */
+  width: auto !important;       /* ensure no conflicting width */
+  min-width: 150px;             /* keep tap target minimum size */
+  max-width: 320px;             /* limit max width for very wide containers */
+  padding: 12px 24px;           /* horizontal padding for nice shape */
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: white;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* 
+  Hover state for the Add to Cart button when enabled.
+*/
+.add-to-cart-btn:hover:not(:disabled) {
+  background-color: #005bb5;
+}
+
+/* 
+  Disabled state for the Add to Cart button.
+*/
+.add-to-cart-btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* 
+  Desktop-specific styles, applied when viewport is at least 601px wide.
+  Adjust product card layout to two-column with image and details side by side.
+*/
+@media (min-width: 601px) {
+  .product-card {
+    max-width: 600px;
+    padding: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .product-image {
+    width: 50%;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+
+  .product-details {
+    width: 50%;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .product-name,
+  .product-price,
+  .variant-select,
+  .variant-label,
+  .add-to-cart-btn {
+    width: 100%;
+    text-align: left;
+  }
+}
+

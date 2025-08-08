@@ -1,0 +1,74 @@
+/* 
+  Global Resets and Box Sizing
+  ----------------------------
+  Apply 'border-box' sizing model to all elements and their pseudo-elements.
+  This makes width and height properties include padding and border, 
+  simplifying layout and sizing calculations across the app.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+  Base styles for the root HTML and body elements.
+  ------------------------------------------------
+  Ensure these elements fill the viewport entirely on all devices.
+  Reset default margin and padding.
+  Set mobile-friendly system fonts with good readability.
+  Apply background and text color suitable for light themes.
+  Enable font smoothing for better text rendering.
+  Hide horizontal overflow to prevent unwanted scrollbars on small screens.
+  
+  These base styles form the foundation of a mobile-first design, 
+  setting consistent sizing and appearance for the entire app.
+*/
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* 
+  Main Container Layout
+  ---------------------
+  Use flexbox to center content horizontally and vertically.
+  The container fills the full viewport width and height,
+  with comfortable padding for small screens (mobile devices).
+  The background color is inherited from the body to keep consistent appearance.
+  
+  Since these are base styles applied without media queries,
+  this layout is inherently mobile-first and will work well on small devices.
+  Desktop or larger screen enhancements can be layered on top using media queries if desired.
+*/
+main {
+  display: flex;
+  justify-content: center;     /* Horizontal centering */
+  align-items: center;         /* Vertical centering */
+  min-height: 100vh;           /* Full viewport height */
+  width: 100vw;                /* Full viewport width */
+  padding: 2rem;               /* Comfortable spacing around content */
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+/* 
+  Heading and Paragraph Margins
+  -----------------------------
+  Set consistent bottom margin on paragraphs and headings (h1, h2)
+  to maintain readable vertical spacing in text content.
+  No horizontal or top margin, which keeps alignment clean on small screens.
+  
+  Applying these default margins without media queries aligns with mobile-first design principles.
+*/
+p, h1, h2 {
+  margin: 0 0 1em 0;
+}
