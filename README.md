@@ -16,17 +16,13 @@ Features:
 
 Getting Started:
 1. Clone the repository:
-    git clone https://github.com/DMequanint/product-card-demo-MVP.git
-    cd product-card-demo
-2. Install dependencies:
-    npm install
-    # or
-    yarn
-3. Run the development server (Vite’s default is port 5173):
-    npm run dev
-    # or
-    yarn dev
-4. File Structure
+   - git clone https://github.com/DMequanint/product-card-demo-MVP.git
+   - cd product-card-demo
+3. Install dependencies:
+    - npm install
+4. Run the development server (Vite’s default is port 5173):
+    - npm run dev
+5. File Structure
    - src/App.tsx – App entry, centers the product card
    - src/ProductCard.tsx – Product card UI and logic (variants, add to cart)
    - src/ProductCard.css – Responsive, mobile-first styles
