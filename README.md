@@ -1,3 +1,4 @@
+Overview of Layout Approach
 The layout uses a mobile-first design approach, with a centered product card contained within a flexbox-based <main> element that centers content both vertically and horizontally across all screen sizes. Responsiveness is achieved by defining base styles optimized for small screens (stacked, single-column layout) and enhancing the layout on wider viewports via media queries to switch to a two-column horizontal layout, ensuring a seamless and user-friendly experience across devices.
 
 Product Card Demo:
