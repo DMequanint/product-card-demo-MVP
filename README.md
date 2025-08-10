@@ -11,7 +11,7 @@ Getting Started:
 4. Run the development server (Vite’s default is port 5173):
     - npm run dev
 5. File Structure
-   - src/App.tsx – App entry, centers the product card
-   - src/ProductCard.tsx – Product card UI and logic (variants, add to cart)
-   - src/ProductCard.css – Responsive, mobile-first styles
-   - src/assets/ – Product images and static assets.
+   - src/App.tsx – App entry
+   - src/ProductCard.tsx – Product card UI and logic (variants, add to cart).
+   - src/ProductCard.css – Responsive, mobile-first styles.
+   - src/assets/ – Product images.
