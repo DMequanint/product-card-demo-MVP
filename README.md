@@ -4,7 +4,7 @@ Overview of Layout Approach:
 
 Product Card Demo:
 
-A minimum viable product, simple, mobile-first React demo that showcases a visually pleasing, responsive product card.
+A minimum viable product, simple, mobile-first React demo that showcases responsive product card.
 Features:
 - Mobile-first, responsive, and accessible design
 - Product variant selection with stock awareness
