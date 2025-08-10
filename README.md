@@ -1,14 +1,10 @@
-Overview of Layout Approach
-The layout uses a mobile-first design approach, with a centered product card contained within a flexbox-based <main> element that centers content both vertically and horizontally across all screen sizes. Responsiveness is achieved by defining base styles optimized for small screens (stacked, single-column layout) and enhancing the layout on wider viewports via media queries to switch to a two-column horizontal layout, ensuring a seamless and user-friendly experience across devices.
+Overview of Layout Approach:
+- The layout uses a mobile-first design approach, with a centered product card contained within a flexbox-based <main> element that centers content both vertically and horizontally across all screen sizes.
+- Responsiveness is achieved by defining base styles optimized for small screens (stacked, single-column layout).
 
 Product Card Demo:
 
-A simple, mobile-first React demo that showcases a visually pleasing, responsive product card. The card displays product details, an image, selectable variants (with in-stock/out-of-stock info), and an "Add to Cart" button.
-
-Layout Approach:
-- Uses mobile-first CSS: on small screens, product information and controls are stacked vertically for easy reading and use.
-- Content is centered with a flexbox <main> container. On larger screens, a media query displays the product card in a two-column horizontal layout.
-
+A minimum viable product, simple, mobile-first React demo that showcases a visually pleasing, responsive product card.
 Features:
 - Mobile-first, responsive, and accessible design
 - Product variant selection with stock awareness
